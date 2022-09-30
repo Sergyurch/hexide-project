@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  nginx:   
+    build: ./nginx 
+    ports:   
+     - 8080:80
+    links:
+     - php
+    working_dir: /var/www/hexide-project
+    volumes:
+      - ./www/hexide-project:/var/www/hexide-project
+      
+  php:
+    build: ./php
+    expose:
+      - 9000
+    working_dir: /var/www/hexide-project
+    volumes:
+      - ./www/hexide-project:/var/www/hexide-project
+  
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      - MARIADB_ROOT_PASSWORD=123456
+    volumes:
+      - ./databases:/var/lib/mysql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 6080:8080
