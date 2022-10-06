@@ -1,17 +1,17 @@
 @extends('adminlte::page')
 
 @section('content')
-    <div>Name: {{ $user->name }}</div>
-    <div>Email: {{ $user->email }}</div>
+    <div>{{ __('content.name') }}: {{ $user->name }}</div>
+    <div>{{ __('content.email') }}: {{ $user->email }}</div>
     <div class="mt-3 mb-3">
-        <a href="{{ route('admin.users.destroy', ['user' => $user->id]) }}" class="btn btn-danger">Delete</a>
-        <a href="{{ route('admin.users.index') }}" class="btn btn-primary">Cancel</a>
+        <a href="{{ route('admin.users.destroy', ['user' => $user->id]) }}" class="btn btn-danger">{{ __('content.delete') }}</a>
+        <a href="{{ route('admin.users.index') }}" class="btn btn-primary">{{ __('content.cancel') }}</a>
     </div>
     <table class="table table-striped table-hover">
         <thead>
             <tr>
-                <th scope="col">Order number</th>
-                <th scope="col">Date</th>
+                <th scope="col">{{ __('content.order_number') }}</th>
+                <th scope="col">{{ __('content.date') }}</th>
             </tr>
         </thead>
         <tbody>

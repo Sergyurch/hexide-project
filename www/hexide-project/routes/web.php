@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\LocaleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,7 +25,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware('auth')->name('dashboard');
 
-Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
+Route::get('/locale/{locale}', [LocaleController::class, 'changeLocale'])->name('locale');
+
+Route::middleware(['auth', 'admin', 'set_locale'])->prefix('admin')->group(function () {
     Route::get('/', function () {
         return view('admin.index');
     })->name('admin.index');

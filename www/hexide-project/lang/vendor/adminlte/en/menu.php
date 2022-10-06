@@ -16,4 +16,7 @@ return [
     'important'                     => 'Important',
     'warning'                       => 'Warning',
     'information'                   => 'Information',
+    'users_key'                     => 'Users',
+    'orders_key'                    => 'Orders',
+    'items_key'                     => 'Items',
 ];

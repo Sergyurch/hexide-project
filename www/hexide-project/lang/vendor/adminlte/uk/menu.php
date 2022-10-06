@@ -16,4 +16,8 @@ return [
     'important'                     => 'Важливо',
     'warning'                       => 'Увага',
     'information'                   => 'Інформація',
+    'users_key'                     => 'Користувачі',
+    'orders_key'                    => 'Замовлення',
+    'items_key'                     => 'Товари',
+    'search'                        => 'Пошук',
 ];

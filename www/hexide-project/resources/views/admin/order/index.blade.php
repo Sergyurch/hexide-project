@@ -4,9 +4,9 @@
     <table class="table table-striped table-hover">
         <thead>
             <tr>
-                <th scope="col">Order number</th>
-                <th scope="col">Client</th>
-                <th scope="col">Date</th>
+                <th scope="col">{{ __('content.order_number') }}</th>
+                <th scope="col">{{ __('content.client') }}</th>
+                <th scope="col">{{ __('content.date') }}</th>
             </tr>
         </thead>
         <tbody>

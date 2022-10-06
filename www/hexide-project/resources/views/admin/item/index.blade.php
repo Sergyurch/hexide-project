@@ -4,9 +4,9 @@
     <table class="table table-striped table-hover">
         <thead>
             <tr>
-                <th scope="col">Item</th>
-                <th scope="col">Description</th>
-                <th scope="col">Price</th>
+                <th scope="col">{{ __('content.item') }}</th>
+                <th scope="col">{{ __('content.description') }}</th>
+                <th scope="col">{{ __('content.price') }}</th>
             </tr>
         </thead>
         <tbody>

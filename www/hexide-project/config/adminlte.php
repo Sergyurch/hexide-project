@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Lang;
+
 return [
 
     /*
@@ -297,9 +299,11 @@ return [
             'topnav_right' => true,
         ],
         [
+            'key'          => 'fullscreen_widget',
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
+        
 
         // Sidebar items:
         [
@@ -311,22 +315,24 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        [
-            'text'        => 'Users',
+    /*    [
+            'text'        => 'users_key',
             'url'         => 'admin/users',
             'icon'        => 'far fa-fw fa-user',
+            'label'       => 4,
+            'label_color' => 'success',
         ],
         [
-            'text'        => 'Orders',
+            'text'        => 'orders_key',
             'url'         => 'admin/orders',
             'icon'        => 'fa fa-shopping-cart',
         ],
         [
-            'text'        => 'Items',
+            'text'        => 'items_key',
             'url'         => 'admin/items',
             'icon'        => 'fa fa-database',
         ],
-    /*    ['header' => 'account_settings'],
+        ['header' => 'account_settings'],
         [
             'text' => 'profile',
             'url'  => 'admin/settings',

@@ -4,8 +4,8 @@
     <table class="table table-striped table-hover">
         <thead>
             <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
+                <th scope="col">{{ __('content.name') }}</th>
+                <th scope="col">{{ __('content.email') }}</th>
             </tr>
         </thead>
         <tbody>

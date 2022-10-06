@@ -1,16 +1,16 @@
 @extends('adminlte::page')
 
 @section('content')
-    <div class="py-3">Order number: {{ $order->number }}</div>
-    <div class="">Client: <a href="{{ route('admin.users.show', ['user' => $order->user->id]) }}">{{ $order->user->name }}</a></div>
-    <h2 class="text-center">Order items</h2>
+    <div class="py-3">{{ __('content.order_number') }}: {{ $order->number }}</div>
+    <div class="">{{ __('content.client') }}: <a href="{{ route('admin.users.show', ['user' => $order->user->id]) }}">{{ $order->user->name }}</a></div>
+    <h2 class="text-center">{{ __('content.order_items') }}</h2>
     <table class="table table-striped table-hover">
         <thead>
             <tr>
                 <th scope="col">№</th>
-                <th scope="col">Item</th>
-                <th scope="col">Price</th>
-                <th scope="col">Quantity</th>
+                <th scope="col">{{ __('content.item') }}</th>
+                <th scope="col">{{ __('content.price') }}</th>
+                <th scope="col">{{ __('content.quantity') }}</th>
             </tr>
         </thead>
         <tbody>
