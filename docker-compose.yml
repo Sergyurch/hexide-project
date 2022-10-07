@@ -5,7 +5,6 @@ services:
     build: ./nginx 
     ports:   
      - 8080:80
-    # - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
     links:
      - php
     working_dir: /var/www/hexide-project
