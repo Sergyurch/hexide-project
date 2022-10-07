@@ -12,13 +12,13 @@ services:
       - ./www/hexide-project:/var/www/hexide-project
       
   php:
+    container_name: php-container
     build: ./php
-    expose:
-      - 9000
-    working_dir: /var/www/hexide-project
     volumes:
       - ./www/hexide-project:/var/www/hexide-project
-  
+    expose:
+      - 9000
+    
   db:
     image: mariadb
     restart: always
