@@ -8,3 +8,4 @@
   <li>In the shell run command "php atisan migrate --seed"</li>
   <li>In the shell run command "exit"</li>
 </ol>
+<p>Website will be available at http://localhost:8080/</p>
