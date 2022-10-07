@@ -22,15 +22,17 @@ class DatabaseSeeder extends Seeder
     {
         User::factory()->create([
             'email' => 'admin@gmail.com',
-            'is_admin' => true,
+            'role' => 'admin',
             'password' => Hash::make('admin'),
         ]);
 
+        Item::factory(200)->create();
+        
         User::factory(50)->create();
 
         Order::factory(100)->create();
 
-        Item::factory(200)->create();
+        
 
         ItemOrder::factory(500)->create();
 

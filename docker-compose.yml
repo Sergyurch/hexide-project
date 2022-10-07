@@ -5,6 +5,7 @@ services:
     build: ./nginx 
     ports:   
      - 8080:80
+    # - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
     links:
      - php
     working_dir: /var/www/hexide-project
@@ -32,3 +33,15 @@ services:
     restart: always
     ports:
       - 6080:8080
+
+  node:
+    image: node:alpine
+    depends_on:
+      - db
+    working_dir: /home/node/app
+    volumes:
+      - ./www/hexide-project:/home/node/app
+    command: sh -c "npm install && npm run dev"
+    network_mode: host
+
+    
