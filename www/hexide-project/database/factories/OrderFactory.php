@@ -25,7 +25,7 @@ class OrderFactory extends Factory
     public function definition()
     {
         return [
-            'number' => fake()->unique()->numberBetween($min = 1000, $max = 1000000),
+            'number' => fake()->unixTime($max = 'now'),
             'user_id' => fake()->numberBetween($min = 2, $max = 50),
         ];
     }
